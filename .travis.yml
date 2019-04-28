@@ -8,7 +8,7 @@ before_install:
 #script:
 #  - docker run josheluis/react-test npm test -- --coverage
 
-after_success:
+script:
   - docker build -t josheluis/multi-client ./client 
   - docker build -t josheluis/multi-nginx ./nginx
   - docker build -t josheluis/multi-server ./server
