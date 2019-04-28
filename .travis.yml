@@ -2,11 +2,11 @@ sudo: required
 services:
   - docker 
 
-before_install:
-  - docker build -t josheluis/react-test -f ./client/Dockerfile.dev ./client
+#before_install:
+#  - docker build -t josheluis/react-test -f ./client/Dockerfile.dev ./client
 
-script:
-  - docker run josheluis/react-test npm test -- --coverage
+#script:
+#  - docker run josheluis/react-test npm test -- --coverage
 
 after_success:
   - docker build -t josheluis/multi-client ./client 
